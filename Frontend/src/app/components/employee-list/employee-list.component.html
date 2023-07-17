@@ -1,0 +1,22 @@
+<p>employee-list works!</p>
+<div>
+    <div class="toolbar">
+        <a [routerLink]="'/create'"><button class="btn btn-primary">Add Employee</button></a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Sex</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.name}}</td>
+                <td>{{employee.birthday | date:"MM/dd/yy"}}</td>
+                <td>{{employee.sex | Sex}}</td>
+                <td><a [routerLink]="['/employee', employee.id]"><button class="btn btn-primary">Details</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
