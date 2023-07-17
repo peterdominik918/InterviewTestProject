@@ -1,0 +1,42 @@
+<div>Add Employee</div>
+<div>
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+
+        <div>
+            <label for="name">
+                Name
+            </label>
+            <input id="name" type="text" class="form-control" formControlName="name">
+        </div>
+        
+        <div>
+            <label for="birthday">
+                Birthday
+            </label>
+            <input id="birthday" type="date" class="form-control" formControlName="birthday">
+        </div>
+
+        <div>
+            <label for="sex">
+                Sex
+            </label>
+            <select id="sex" class="form-control" formControlName="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="description">
+                Description
+            </label>
+            <textarea id="description" class="form-control" type="text" formControlName="description"></textarea>
+        </div>
+
+        <div class="toolbar">
+            <button class="btn btn-primary" type="submit">Add</button>
+            <a [routerLink]="'/'"><button class="btn btn-warning">Cancel</button></a>
+        </div>
+      
+      </form>
+</div>
