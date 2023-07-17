@@ -1,0 +1,7 @@
+.vscode
+/Backend/.vscode
+/Backend/DEmployee/bin
+/Backend/DEmployee/obj
+/Backend/WebApi/bin
+/Backend/WebApi/obj
+/Frontend/node_modules
